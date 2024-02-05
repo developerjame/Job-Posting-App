@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/', [JobController::class, 'index']);
+Route::get('/jobs/{job}', [JobController::class, 'show']);
