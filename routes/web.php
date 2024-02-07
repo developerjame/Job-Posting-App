@@ -29,4 +29,8 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::post('/logout', [UserController::class, 'logout']);
 Route::get('/users/profile', [UserController::class, 'profile'])->middleware('auth');
+Route::get('/edit-profile', [UserController::class, 'profileEdit'])->middleware('auth');
+Route::put('/users/edit-profile', [UserController::class, 'update']);
+Route::get('/change-password', [UserController::class, 'changePassword'])->middleware('auth');
+Route::post('change-password', [UserController::class, 'updatePassword']);
 
