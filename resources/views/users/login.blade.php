@@ -25,7 +25,7 @@
                             @enderror
                         </div>
 
-                        <div class="mb-6">
+                        <div class="mb-2">
                             <label
                                 for="password"
                                 class="inline-block text-lg mb-2"
@@ -42,9 +42,13 @@
                                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                             @enderror
                         </div>
+                        <p>
+                            <a href="{{ route('password.request') }}" class="text-primary"
+                                >Forgot password?</a
+                            >
+                        </p>
 
-
-                        <div class="mb-6">
+                        <div class="mb-6 mt-6">
                             <button
                                 type="submit"
                                 class="bg-primary text-white rounded py-2 px-4 hover:bg-black"
